@@ -5,9 +5,14 @@
  */
 package com.stario.consultorio.services;
 
-import com.stario.consultorio.models.MedicoModel;
-import com.stario.repositories.MedicoRepositories;
+
+
+
 import java.util.ArrayList;
+
+import com.stario.consultorio.models.MedicoModel;
+import com.stario.consultorio.repositories.MedicoRepositories;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +21,10 @@ import org.springframework.stereotype.Service;
  * @author Noe
  */
 @Service
-public class MedicoService {
-    @Autowired
-    MedicoRepositories medicoRepositories;
+public class MedicoService  {
+
+@Autowired
+MedicoRepositories medicoRepositories;
     
     public ArrayList<MedicoModel> obtenerAllMedicos(){
         return (ArrayList<MedicoModel>) medicoRepositories.findAll();

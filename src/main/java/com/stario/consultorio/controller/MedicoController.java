@@ -24,7 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/medico")
 public class MedicoController {
-    @Autowired
+    
+  /*  @Autowired
     MedicoService medicoService;
     
     @GetMapping()
@@ -37,6 +38,13 @@ public class MedicoController {
         return this.medicoService.guardarMedico(medico);
         
     }
-     
+     */
+    @Autowired
+    MedicoService medicoService;
+    
+    @GetMapping()
+    public ArrayList<MedicoModel> obtenerAllMedicos2(){
+        return medicoService.obtenerAllMedicos();
+    }
     
 }
