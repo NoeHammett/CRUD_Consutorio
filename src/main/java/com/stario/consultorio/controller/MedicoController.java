@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/medico")
 public class MedicoController {
     
-  /*  @Autowired
+   @Autowired
     MedicoService medicoService;
     
     @GetMapping()
@@ -35,16 +35,21 @@ public class MedicoController {
     
     @PostMapping()
     public MedicoModel guardarMedicos(@RequestBody MedicoModel medico){
-        return this.medicoService.guardarMedico(medico);
-        
+        System.out.println(medico);
+        return this.medicoService.guardarMedico(medico);  
     }
-     */
-    @Autowired
-    MedicoService medicoService;
     
-    @GetMapping()
-    public ArrayList<MedicoModel> obtenerAllMedicos2(){
-        return medicoService.obtenerAllMedicos();
-    }
+//    @PostMapping(value = "/agregarmedico", consumes = "application/json", produces = "application/json")
+//    public MedicoModel guardarMedicos(@RequestBody MedicoModel medico){
+//        return this.medicoService.guardarMedico(medico); 
+//    }
+     
+//    @Autowired
+//    MedicoService medicoService;
+//    
+//    @GetMapping()
+//    public ArrayList<MedicoModel> obtenerAllMedicos2(){
+//        return medicoService.obtenerAllMedicos();
+//    }
     
 }

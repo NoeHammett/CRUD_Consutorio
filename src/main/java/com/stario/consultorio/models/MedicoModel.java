@@ -11,12 +11,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Noe
  */
-
 @Entity
 @Table(name="medico")
 public class MedicoModel {
@@ -34,6 +34,7 @@ public class MedicoModel {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(unique = true, nullable = false)
    private Long id_medico;
+   
    private Integer id_estatus;
    private Integer id_paciente;
 
