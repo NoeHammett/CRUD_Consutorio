@@ -8,6 +8,7 @@ package com.stario.consultorio.controller;
 import com.stario.consultorio.models.MedicoModel;
 import com.stario.consultorio.services.MedicoService;
 import java.util.ArrayList;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,9 +32,14 @@ public class MedicoController {
    @Autowired
     MedicoService medicoService;
     
-    @GetMapping()
+    @GetMapping("/listado")
     public ArrayList<MedicoModel> obtenerAllMedicos(){
         return medicoService.obtenerAllMedicos();
+    }
+
+    @GetMapping(path = "/{id}")
+    public Optional<MedicoModel> obtenerMedicoId(@PathVariable("id") Long id) {
+        return this.medicoService.ObtenerMedicoId(id);
     }
     
     @PostMapping()
@@ -52,17 +58,6 @@ public class MedicoController {
         }        
     }
     
-//    @PostMapping(value = "/agregarmedico", consumes = "application/json", produces = "application/json")
-//    public MedicoModel guardarMedicos(@RequestBody MedicoModel medico){
-//        return this.medicoService.guardarMedico(medico); 
-//    }
-     
-//    @Autowired
-//    MedicoService medicoService;
-//    
-//    @GetMapping()
-//    public ArrayList<MedicoModel> obtenerAllMedicos2(){
-//        return medicoService.obtenerAllMedicos();
-//    }
+
     
 }
