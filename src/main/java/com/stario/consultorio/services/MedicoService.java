@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import com.stario.consultorio.models.MedicoModel;
 import com.stario.consultorio.repositories.MedicoRepositories;
 
+import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,5 +33,15 @@ MedicoRepositories medicoRepositories;
     
     public MedicoModel guardarMedico(MedicoModel medico){
         return  medicoRepositories.save(medico);
+    }
+
+    public boolean eliminarMedico(Long id){
+        try{
+            medicoRepositories.deleteById(id);
+            return true;
+        }catch (Exception err){
+            System.out.println("Error al momento de eliminar" + err.getMessage().toString());
+            return false;
+        }
     }
 }
