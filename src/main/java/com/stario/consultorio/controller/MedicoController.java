@@ -32,7 +32,7 @@ public class MedicoController {
    @Autowired
     MedicoService medicoService;
     
-    @GetMapping("/listado")
+    @GetMapping("/listadomedicos")
     public ArrayList<MedicoModel> obtenerAllMedicos(){
         return medicoService.obtenerAllMedicos();
     }
