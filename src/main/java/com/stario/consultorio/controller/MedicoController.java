@@ -42,7 +42,7 @@ public class MedicoController {
         return this.medicoService.ObtenerMedicoId(id);
     }
     
-    @PostMapping()
+    @PostMapping(path = "/agregamedico")
     public MedicoModel guardarMedicos(@RequestBody MedicoModel medico){
         System.out.println(medico);
         return this.medicoService.guardarMedico(medico);  
