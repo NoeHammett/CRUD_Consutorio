@@ -34,14 +34,14 @@ public class EstatusMedicoController {
     @Autowired
     EstatusMedicoService estatusMedicoService;
     
-    @GetMapping("/listadoestatus")
-    public ArrayList<EstatusMedicoModel> obtenerAllEstatus(){
-       return estatusMedicoService.obtenerAllEspecialidad();
+    @GetMapping("/listadoestatusmedico")
+    public ArrayList<EstatusMedicoModel> obtenerAllEstatusMedico(){
+       return estatusMedicoService.obtenerAllEstatusMedico();
    }
     
     @GetMapping(path = "/{id}")
-    public Optional<EstatusMedicoModel> obtenerEstatusById(@PathVariable("id") Long id){
-        return estatusMedicoService.ObtenerMedicoId(id);
+    public Optional<EstatusMedicoModel> obtenerEstatusMedicoById(@PathVariable("id") Long id){
+        return estatusMedicoService.ObtenerEstatusMedicoId(id);
     }
     
     @PostMapping("/agregaestatusmedico")

@@ -23,11 +23,11 @@ public class EstatusMedicoService {
     @Autowired
     EstatusMedicoRepositories estatusMedicoRepositories;
     
-    public ArrayList<EstatusMedicoModel> obtenerAllEspecialidad(){
+    public ArrayList<EstatusMedicoModel> obtenerAllEstatusMedico(){
         return (ArrayList<EstatusMedicoModel>) estatusMedicoRepositories.findAll();
     }
     
-     public Optional <EstatusMedicoModel> ObtenerMedicoId(Long id){
+     public Optional <EstatusMedicoModel> ObtenerEstatusMedicoId(Long id){
         return estatusMedicoRepositories.findById(id);
     }
     
