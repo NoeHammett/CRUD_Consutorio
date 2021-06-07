@@ -15,11 +15,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- *
- * @author Noe
- */
-
 @Entity
 @Table(name="paciente")
 public class PacienteModel {

@@ -18,10 +18,7 @@ import org.hibernate.annotations.SourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author Noe
- */
+
 @Service
 public class MedicoService  {
 

@@ -9,10 +9,7 @@ import com.stario.consultorio.models.PacienteModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Noe
- */
+
 @Repository
 public interface PacienteRepositories extends CrudRepository <PacienteModel,Long>{
     

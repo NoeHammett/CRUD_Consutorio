@@ -13,10 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author Noe
- */
+
 @Entity
 @Table(name="medico")
 public class MedicoModel {

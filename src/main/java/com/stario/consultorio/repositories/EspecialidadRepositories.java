@@ -9,10 +9,6 @@ import com.stario.consultorio.models.EspecialidadModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Noe
- */
 @Repository
 public interface EspecialidadRepositories extends CrudRepository <EspecialidadModel, Long> {
 }
